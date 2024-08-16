@@ -1,7 +1,7 @@
 {
     "name": "RDF Daily Checklist",
     "short_name": "Checklist",
-    "start_url": "/RDF_Checklist/rdf_daily.html",
+    "start_url": "/RDF_Checklist/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
