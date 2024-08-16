@@ -1,6 +1,6 @@
 // Register the service worker to handle offline capabilities
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/RDF_Checklist/service-worker.js')
     .then(() => console.log('Service Worker Registered'))
     .catch(err => console.log('Service Worker registration failed:', err));
 }
