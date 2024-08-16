@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDF Daily Checklist - Daily Checklist Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>RDF Daily Checklist</h1>
+
+    <!-- Basic Information -->
+    <div class="section">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date" style="margin-left: 20px;">Date:</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+
+    <!-- Daily Checklist Section -->
+    <div class="section">
+        <h2>Daily Checklist</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Erosion Check</th>
+                    <th>Leachate Level AM</th>
+                    <th>Leachate Level PM</th>
+                    <th>Litter</th>
+                    <th>Odor</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell # 1, # 2</td>
+                    <td><input type="text" name="cell12_erosion"></td>
+                    <td><input type="number" name="cell12_am" step="0.01"></td>
+                    <td><input type="number" name="cell12_pm" step="0.01"></td>
+                    <td><input type="text" name="cell12_litter"></td>
+                    <td><input type="text" name="cell12_odor"></td>
+                    <td><input type="text" name="cell12_comments"></td>
+                </tr>
+                <tr>
+                    <td>Cell # 3</td>
+                    <td><input type="text" name="cell3_erosion"></td>
+                    <td><input type="number" name="cell3_am" step="0.01"></td>
+                    <td><input type="number" name="cell3_pm" step="0.01"></td>
+                    <td><input type="text" name="cell3_litter"></td>
+                    <td><input type="text" name="cell3_odor"></td>
+                    <td><input type="text" name="cell3_comments"></td>
+                </tr>
+                <tr>
+                    <td>Cell # 4</td>
+                    <td><input type="text" name="cell4_erosion"></td>
+                    <td><input type="number" name="cell4_am" step="0.01"></td>
+                    <td><input type="number" name="cell4_pm" step="0.01"></td>
+                    <td><input type="text" name="cell4_litter"></td>
+                    <td><input type="text" name="cell4_odor"></td>
+                    <td><input type="text" name="cell4_comments"></td>
+                </tr>
+                <tr>
+                    <td>Cell # 5</td>
+                    <td><input type="text" name="cell5_erosion"></td>
+                    <td><input type="number" name="cell5_am" step="0.01"></td>
+                    <td><input type="number" name="cell5_pm" step="0.01"></td>
+                    <td><input type="text" name="cell5_litter"></td>
+                    <td><input type="text" name="cell5_odor"></td>
+                    <td><input type="text" name="cell5_comments"></td>
+                </tr>
+                <tr>
+                    <td>Cell # 6 / # 7</td>
+                    <td><input type="text" name="cell67_erosion"></td>
+                    <td><input type="number" name="cell67_am" step="0.01"></td>
+                    <td><input type="number" name="cell67_pm" step="0.01"></td>
+                    <td><input type="text" name="cell67_litter"></td>
+                    <td><input type="text" name="cell67_odor"></td>
+                    <td><input type="text" name="cell67_comments"></td>
+                </tr>
+                <tr>
+                    <td>South Face</td>
+                    <td><input type="text" name="southface_erosion"></td>
+                    <td><input type="number" name="southface_am" step="0.01"></td>
+                    <td><input type="number" name="southface_pm" step="0.01"></td>
+                    <td><input type="text" name="southface_litter"></td>
+                    <td><input type="text" name="southface_odor"></td>
+                    <td><input type="text" name="southface_comments"></td>
+                </tr>
+                <tr>
+                    <td>North Face</td>
+                    <td><input type="text" name="northface_erosion"></td>
+                    <td><input type="number" name="northface_am" step="0.01"></td>
+                    <td><input type="number" name="northface_pm" step="0.01"></td>
+                    <td><input type="text" name="northface_litter"></td>
+                    <td><input type="text" name="northface_odor"></td>
+                    <td><input type="text" name="northface_comments"></td>
+                </tr>
+                <tr>
+                    <td>East Face</td>
+                    <td><input type="text" name="eastface_erosion"></td>
+                    <td><input type="number" name="eastface_am" step="0.01"></td>
+                    <td><input type="number" name="eastface_pm" step="0.01"></td>
+                    <td><input type="text" name="eastface_litter"></td>
+                    <td><input type="text" name="eastface_odor"></td>
+                    <td><input type="text" name="eastface_comments"></td>
+                </tr>
+                <tr>
+                    <td>Leachate Tank Levels</td>
+                    <td><input type="text" name="leachate_erosion"></td>
+                    <td><input type="number" name="leachate_am" step="0.01"></td>
+                    <td><input type="number" name="leachate_pm" step="0.01"></td>
+                    <td><input type="text" name="leachate_litter"></td>
+                    <td><input type="text" name="leachate_odor"></td>
+                    <td><input type="text" name="leachate_comments"></td>
+                </tr>
+                <tr>
+                    <td>Bio Filter Levels</td>
+                    <td><input type="text" name="biofilter_erosion"></td>
+                    <td><input type="number" name="biofilter_am" step="0.01"></td>
+                    <td><input type="number" name="biofilter_pm" step="0.01"></td>
+                    <td><input type="text" name="biofilter_litter"></td>
+                    <td><input type="text" name="biofilter_odor"></td>
+                    <td><input type="text" name="biofilter_comments"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Quality Control Section -->
+    <div class="section">
+        <h2>Quality Control</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Dust within Acceptable Range</td>
+                    <td>
+                        <select name="dust_acceptable">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Working Face Free of Unacceptable Materials</td>
+                    <td>
+                        <select name="working_face">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Greenhead Road Inspected</td>
+                    <td>
+                        <select name="greenhead_road">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                    <td>Bio-Filter Loads:</td>
+                    <td><input type="text" name="bio_filter_loads"></td>
+                </tr>
+                <tr>
+                    <td>Leachate Tank Walk Around</td>
+                    <td>
+                        <select name="leachate_tank">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                    <td>Leachate Loads:</td>
+                    <td><input type="text" name="leachate_loads"></td>
+                </tr>
+                <tr>
+                    <td>Roads Passable</td>
+                    <td>
+                        <select name="roads_passable">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                    <td>Left to run:</td>
+                    <td><input type="text" name="left_to_run"></td>
+                </tr>
+                <tr>
+                    <td>Quadrants Pumped</td>
+                    <td>
+                        <select name="quadrants_pumped">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                    <td>Do they need to run tonight?</td>
+                    <td>
+                        <select name="run_tonight">
+                            <option value="Yes">Yes</option>
+                            <option value="No" selected>No</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <!-- Sed Ponds Section -->
+  <div class="section">
+    <h2>Sed Ponds</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Level</th>
+                <th>Drums</th>
+                <th>Treated/Discharged/Samples Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>South Treating Pond</td>
+                <td><input type="text" name="south_treating_pond_level"></td>
+                <td><input type="number" name="south_treating_pond_drums"></td>
+                <td>
+                    <input type="text" name="south_treating_pond_treated" placeholder="Treated">
+                    <input type="text" name="south_treating_pond_discharged" placeholder="Discharged">
+                    <input type="text" name="south_treating_pond_samples1" placeholder="Sample 1">
+                    <input type="text" name="south_treating_pond_samples2" placeholder="Sample 2">
+                </td>
+            </tr>
+            <tr>
+                <td>South Holding Pond Blocks Showing</td>
+                <td><input type="text" name="south_holding_pond_level"></td>
+                <td><input type="number" name="south_holding_pond_drums"></td>
+                <td>
+                    <input type="text" name="south_holding_pond_treated" placeholder="Treated">
+                    <input type="text" name="south_holding_pond_discharged" placeholder="Discharged">
+                    <input type="text" name="south_holding_pond_samples1" placeholder="Sample 1">
+                    <input type="text" name="south_holding_pond_samples2" placeholder="Sample 2">
+                </td>
+            </tr>
+            <tr>
+                <td>North Pond</td>
+                <td><input type="text" name="north_pond_level"></td>
+                <td><input type="number" name="north_pond_drums"></td>
+                <td>
+                    <input type="text" name="north_pond_treated" placeholder="Treated">
+                    <input type="text" name="north_pond_discharged" placeholder="Discharged">
+                    <input type="text" name="north_pond_samples1" placeholder="Sample 1">
+                    <input type="text" name="north_pond_samples2" placeholder="Sample 2">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Leak Detection Section -->
+<div class="section">
+    <h2>Leak Detection</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Pumped</th>
+                <th>Time</th>
+                <th>Pumped</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell # 1</td>
+                <td><input type="text" name="cell1_pumped1"></td>
+                <td><input type="time" name="cell1_time1"></td>
+                <td><input type="text" name="cell1_pumped2"></td>
+                <td><input type="time" name="cell1_time2"></td>
+            </tr>
+            <tr>
+                <td>Cell # 3</td>
+                <td><input type="text" name="cell3_pumped1"></td>
+                <td><input type="time" name="cell3_time1"></td>
+                <td><input type="text" name="cell3_pumped2"></td>
+                <td><input type="time" name="cell3_time2"></td>
+            </tr>
+            <tr>
+                <td>Cell # 4</td>
+                <td><input type="text" name="cell4_pumped1"></td>
+                <td><input type="time" name="cell4_time1"></td>
+                <td><input type="text" name="cell4_pumped2"></td>
+                <td><input type="time" name="cell4_time2"></td>
+            </tr>
+            <tr>
+                <td>Cell # 5</td>
+                <td><input type="text" name="cell5_pumped1"></td>
+                <td><input type="time" name="cell5_time1"></td>
+                <td><input type="text" name="cell5_pumped2"></td>
+                <td><input type="time" name="cell5_time2"></td>
+            </tr>
+            <tr>
+                <td>Cell # 6</td>
+                <td><input type="text" name="cell6_pumped1"></td>
+                <td><input type="time" name="cell6_time1"></td>
+                <td><input type="text" name="cell6_pumped2"></td>
+                <td><input type="time" name="cell6_time2"></td>
+            </tr>
+            <tr>
+                <td>Cell # 7</td>
+                <td><input type="text" name="cell7_pumped1"></td>
+                <td><input type="time" name="cell7_time1"></td>
+                <td><input type="text" name="cell7_pumped2"></td>
+                <td><input type="time" name="cell7_time2"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="section">
+    <h2>Cover</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Cover Type</th>
+                <th>Loads</th>
+                <th>Need?</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alternate Cover</td>
+                <td><input type="number" name="alternate_cover_loads"></td>
+                <td>
+                    <select name="alternate_cover_need">
+                        <option value="Yes">Yes</option>
+                        <option value="No" selected>No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="alternate_cover_comments"></td>
+            </tr>
+            <tr>
+                <td>Cover</td>
+                <td><input type="number" name="cover_loads"></td>
+                <td>
+                    <select name="cover_need">
+                        <option value="Yes">Yes</option>
+                        <option value="No" selected>No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="cover_comments"></td>
+            </tr>
+            <tr>
+                <td>Rock</td>
+                <td><input type="number" name="rock_loads"></td>
+                <td>
+                    <select name="rock_need">
+                        <option value="Yes">Yes</option>
+                        <option value="No" selected>No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="rock_comments"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="section">
+    <h2>Landfill Surface Inspection</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="erosion"> Erosion</td>
+                <td><input type="checkbox" name="clean_out_pipes"> Clean out Pipes</td>
+                <td><input type="checkbox" name="sediment_control"> Sediment Control</td>
+                <td><input type="checkbox" name="washouts"> Washouts</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="ditches_roads"> Ditches/Roads</td>
+                <td><input type="checkbox" name="black_gray_spots"> Black or Gray Spots</td>
+                <td><input type="checkbox" name="warm_spots"> Warm Spots</td>
+                <td><input type="checkbox" name="large_cracks"> Large Cracks</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Activities / Comments / Location -->
+    <div class="section">
+        <h3>Activities / Comments / Location:</h3>
+        <textarea id="activities_comments" name="activities_comments" rows="6" cols="80"></textarea>
+    </div>
+</div>
+   <!-- Site Map Section -->
+   <div class="section">
+    <h2>Site Map</h2>
+    <!-- Header Fields -->
+    <div class="section">
+        <label for="cell">Cell:</label>
+        <input type="text" id="cell" name="cell" required>
+
+        <label for="date" style="margin-left: 20px;">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="name" style="margin-left: 20px;">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <!-- Image of the Site Map -->
+    <div class="section">
+        <img src="site_map.png" alt="Site Map" style="width:80%; height:auto;">
+    </div>
+
+    <!-- Comments Section -->
+    <div class="section">
+        <h3>Comments:</h3>
+        <textarea id="map_comments" name="map_comments" rows="4" cols="100"></textarea>
+    </div>
+</div>
+
+    <button type="submit">Submit</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
