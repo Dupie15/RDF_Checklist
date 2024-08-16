@@ -5,7 +5,8 @@ const urlsToCache = [
     '/styles.css',
     '/script.js',
     '/manifest.json',
-    '/icon-192x192.png'
+    '/icon-192x192.png',
+    '/site_map.png'
 ];
 
 self.addEventListener('install', function(event) {
