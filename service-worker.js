@@ -1,12 +1,12 @@
 const CACHE_NAME = 'checklist-cache-v1';
 const urlsToCache = [
     '/',
-    '/rdf_daily.html',
-    '/styles.css',
-    '/script.js',
-    '/manifest.json',
-    '/icon-192x192.png',
-    '/site_map.png'
+    '/RDF_Checklist/index.html',  // Updated to reflect the new file name
+    '/RDF_Checklist/styles.css',
+    '/RDF_Checklist/script.js',
+    '/RDF_Checklist/manifest.json',
+    '/RDF_Checklist/icon-192x192.png',
+    '/RDF_Checklist/site_map.png'
 ];
 
 self.addEventListener('install', function(event) {
